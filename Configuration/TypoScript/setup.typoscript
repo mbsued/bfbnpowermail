@@ -1,0 +1,52 @@
+# Add own partials
+plugin.tx_powermail {
+	view {
+		templateRootPaths {
+		}
+		partialRootPaths {
+			20 = EXT:bfbnpowermail/Resources/Private/Partials/
+		}
+		layoutRootPaths {
+		}
+	}
+}
+# Add new Field Properties
+#config.tx_extbase{
+#	persistence{
+#		classes{
+#			In2code\Powermail\Domain\Model\Form {
+#				subclasses {
+#					0 = Bfbn\Bfbnpowermail\Domain\Model\Form
+#				}
+#			}
+#			In2code\Powermail\Domain\Model\Page {
+#				subclasses {
+#					0 = Bfbn\Bfbnpowermail\Domain\Model\Page
+#				}
+#			}
+#			In2code\Powermail\Domain\Model\Field {
+#				subclasses {
+#					0 = Bfbn\Bfbnpowermail\Domain\Model\Field
+#				}
+#			}
+#			Bfbn\Bfbnpowermail\Domain\Model\Form {
+#				mapping {
+#					tableName = tx_powermail_domain_model_form
+#				}
+#			}
+#			Bfbn\Bfbnpowermail\Domain\Model\Page {
+#				mapping {
+#					tableName = tx_powermail_domain_model_page
+#				}
+#			}
+#			Bfbn\Bfbnpowermail\Domain\Model\Field {
+#				mapping {
+#					tableName = tx_powermail_domain_model_field
+#				}
+#			}
+#		}
+#	}
+#	objects {
+#		In2code\Powermail\Domain\Repository\FormRepository.className = Bfbn\Bfbnpowermail\Domain\Repository\FormRepository
+#	}
+#}

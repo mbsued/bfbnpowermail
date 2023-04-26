@@ -1,0 +1,33 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+<div class="powermail_fieldwrap powermail_fieldwrap_type_textarea powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
+	<f:render partial="Form/FieldLabel" arguments="{_all}" />
+
+	<div class="{settings.styles.framework.fieldWrappingClasses}">
+		<f:if condition="{field.bfbnreadonly}">
+			<f:then>
+				<f:form.textarea
+						cols="{field.bfbncol}"
+						rows="{field.bfbnrow}"
+						id="powermail_field_{field.marker}"
+						property="{field.marker}"
+						placeholder="{field.placeholder}"
+						readonly="readonly"
+						value="{vh:misc.prefillField(field:field, mail:mail)}"
+						additionalAttributes="{vh:validation.validationDataAttribute(field:field)}"
+						class="powermail_textarea {settings.styles.framework.fieldClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}" />						
+			</f:then>
+			<f:else>				
+				<f:form.textarea
+						cols="{field.bfbncol}"
+						rows="{field.bfbnrow}"
+						id="powermail_field_{field.marker}"
+						property="{field.marker}"
+						placeholder="{field.placeholder}"
+						value="{vh:misc.prefillField(field:field, mail:mail)}"
+						additionalAttributes="{vh:validation.validationDataAttribute(field:field)}"
+						class="powermail_textarea {settings.styles.framework.fieldClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}" />
+			</f:else>
+		</f:if>
+	</div>
+</div>

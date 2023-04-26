@@ -1,0 +1,33 @@
+{
+    "name": "bfbn/bfbnpowermail",
+    "type": "typo3-cms-extension",
+    "description": "BFBN - Powermail erweitern",
+    "authors": [
+        {
+            "name": "BFBN-Team",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bfbn\\Bfbnpowermail\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bfbn\\Bfbnpowermail\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "bfbn/bfbnpowermail": "self.version",
+        "typo3-ter/bfbnpowermail": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bfbnpowermail"
+        }
+    }
+}
